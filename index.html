@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Science Encyclopedia</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Science Encyclopedia</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#chemistry">Chemistry</a></li>
+                <li><a href="#physics">Physics</a></li>
+                <li><a href="#biology">Biology</a></li>
+                <li><a href="#balance-tool">Balance Equations</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>Welcome to the Science Encyclopedia</h2>
+            <p>Your go-to place for learning about the wonders of science, including chemistry, physics, and biology.</p>
+        </section>
+        <section id="chemistry">
+            <h2>Chemistry</h2>
+            <p>Learn about atoms, molecules, reactions, and more!</p>
+        </section>
+        <section id="balance-tool">
+            <h2>Balance Chemical Equations</h2>
+            <div id="equation-form">
+                <input type="text" id="chemical-equation" placeholder="Enter unbalanced equation">
+                <button id="balance-btn">Balance</button>
+                <p id="balanced-equation"></p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Science Encyclopedia</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
