@@ -1,0 +1,141 @@
+{
+ "note": "Exact values are fixed by definition of the SI (2019) or by convention. The measured value of G is from the CODATA adjustments; masses are rounded here, and the current precise values are published by CODATA.",
+ "constants": [
+  {
+   "symbol": "c",
+   "name": "Speed of light in a vacuum",
+   "value": "299 792 458",
+   "unit": "m/s",
+   "mark": "exact",
+   "note": "Defines the metre."
+  },
+  {
+   "symbol": "h",
+   "name": "Planck constant",
+   "value": "6.626 070 15 × 10⁻³⁴",
+   "unit": "J·s",
+   "mark": "exact",
+   "note": "SI 2019."
+  },
+  {
+   "symbol": "e",
+   "name": "Elementary charge",
+   "value": "1.602 176 634 × 10⁻¹⁹",
+   "unit": "C",
+   "mark": "exact",
+   "note": "SI 2019."
+  },
+  {
+   "symbol": "k",
+   "name": "Boltzmann constant",
+   "value": "1.380 649 × 10⁻²³",
+   "unit": "J/K",
+   "mark": "exact",
+   "note": "SI 2019; defines the kelvin."
+  },
+  {
+   "symbol": "NA",
+   "name": "Avogadro constant",
+   "value": "6.022 140 76 × 10²³",
+   "unit": "1/mol",
+   "mark": "exact",
+   "note": "SI 2019; defines the mole."
+  },
+  {
+   "symbol": "ΔνCs",
+   "name": "Caesium-133 hyperfine transition frequency",
+   "value": "9 192 631 770",
+   "unit": "Hz",
+   "mark": "exact",
+   "note": "Defines the second."
+  },
+  {
+   "symbol": "Kcd",
+   "name": "Luminous efficacy of 540 THz radiation",
+   "value": "683",
+   "unit": "lm/W",
+   "mark": "exact",
+   "note": "Defines the candela."
+  },
+  {
+   "symbol": "gn",
+   "name": "Standard acceleration of gravity",
+   "value": "9.806 65",
+   "unit": "m/s²",
+   "mark": "exact",
+   "note": "A conventional value, not the local gravity."
+  },
+  {
+   "symbol": "atm",
+   "name": "Standard atmosphere",
+   "value": "101 325",
+   "unit": "Pa",
+   "mark": "exact",
+   "note": "A conventional reference pressure."
+  },
+  {
+   "symbol": "au",
+   "name": "Astronomical unit",
+   "value": "149 597 870 700",
+   "unit": "m",
+   "mark": "exact",
+   "note": "IAU 2012."
+  },
+  {
+   "symbol": "cal",
+   "name": "Thermochemical calorie",
+   "value": "4.184",
+   "unit": "J",
+   "mark": "exact",
+   "note": "1 food Calorie is 1000 of these."
+  },
+  {
+   "symbol": "T0",
+   "name": "Zero of the Celsius scale",
+   "value": "273.15",
+   "unit": "K",
+   "mark": "exact",
+   "note": "0 °C is exactly 273.15 K."
+  },
+  {
+   "symbol": "G",
+   "name": "Newtonian constant of gravitation",
+   "value": "6.674 30(15) × 10⁻¹¹",
+   "unit": "m³ kg⁻¹ s⁻²",
+   "mark": "measured",
+   "note": "The least precisely known of the common constants; the figure in brackets is the uncertainty in the last two digits."
+  },
+  {
+   "symbol": "α",
+   "name": "Fine-structure constant",
+   "value": "about 1/137.036",
+   "unit": "(no unit)",
+   "mark": "rounded",
+   "note": "Measured far more precisely than shown; this is a rounded form."
+  },
+  {
+   "symbol": "me",
+   "name": "Electron mass",
+   "value": "9.109 × 10⁻³¹",
+   "unit": "kg",
+   "mark": "rounded",
+   "note": "Measured to many more digits; see CODATA for the current value."
+  },
+  {
+   "symbol": "mp",
+   "name": "Proton mass",
+   "value": "1.673 × 10⁻²⁷",
+   "unit": "kg",
+   "mark": "rounded",
+   "note": "Measured to many more digits; see CODATA for the current value."
+  },
+  {
+   "symbol": "mn",
+   "name": "Neutron mass",
+   "value": "1.675 × 10⁻²⁷",
+   "unit": "kg",
+   "mark": "rounded",
+   "note": "Measured to many more digits; see CODATA for the current value."
+  }
+ ]
+}

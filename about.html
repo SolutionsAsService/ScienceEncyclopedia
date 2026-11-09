@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>About and method: Science Encyclopedia</title>
+<meta name="description" content="How the Science Encyclopedia marks its numbers, where its facts come from, and how to report a mistake.">
+<meta property="og:title" content="About and method: Science Encyclopedia"><meta property="og:description" content="How the Science Encyclopedia marks its numbers, where its facts come from, and how to report a mistake."><meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="mast">
+  <a class="brand" href="index.html"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="2" width="9" height="9" rx="1.5" class="o"/><rect x="2" y="13" width="9" height="9" rx="1.5" class="o"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></svg>Science Encyclopedia</a>
+  <nav aria-label="Pages"><a href="topics.html">Topics</a><a href="elements.html">Elements</a><a href="balance.html">Balance</a><a href="constants.html">Constants</a><a href="about.html" aria-current="page">About</a></nav>
+</header>
+<main id="main">
+
+<section class="page-head"><p class="kicker">About</p><h1>How this works, and how far to trust it</h1>
+<p class="lede">A small reference built to be read, with its confidence shown. It is not a substitute for a textbook or a standards body.</p></section>
+<section id="marks" aria-labelledby="h-m"><h2 id="h-m" class="sech">The marks on numbers</h2><ul class="legend"><li><span class="mk mk-exact"><i aria-hidden="true"></i>Exact</span><span>Exact by definition. The number is part of how the unit or constant is defined, so it has no uncertainty.</span></li><li><span class="mk mk-measured"><i aria-hidden="true"></i>Measured</span><span>Found by experiment. The figure in brackets is the uncertainty in the last digits, and later measurements may refine it.</span></li><li><span class="mk mk-rounded"><i aria-hidden="true"></i>Rounded</span><span>Rounded for readability, or a typical value that varies. Do not use it where precision matters; use the measured figure.</span></li></ul>
+<p>Each mark is a rule style plus a word, never colour alone. Solid means exact, dashed measured, dotted rounded.</p></section>
+<section aria-labelledby="h-s"><h2 id="h-s" class="sech">Where the facts come from</h2>
+<ul class="plain">
+<li>Every fact lives in a data file (<code>data/elements.json</code>, <code>topics.json</code>, <code>constants.json</code>) and the pages are generated from them, so a count printed in a sentence always matches the table or drawing beside it.</li>
+<li>The text and values were written from general knowledge and have <strong>not yet been checked line by line</strong> against IUPAC, CODATA, NIST or textbooks. The exact SI constants and the element names and numbers are the most reliable parts; the topic prose is a short summary.</li>
+<li>The periodic table uses one common layout and one common set of categories. Sources differ on, for example, where to put lanthanum and lutetium and which elements count as metalloids; the table page says which convention it follows.</li>
+<li>The equation balancer is checked against known answers, including awkward ones such as the permanganate and hexacyanoferrate reactions.</li>
+</ul></section>
+<section id="corrections" aria-labelledby="h-c"><h2 id="h-c" class="sech">Report a mistake</h2>
+<p>The most useful report names the page, quotes the sentence or value, and cites a source (a standards body, a textbook edition and page, or a paper).</p>
+<p><a class="btn" href="https://github.com/SolutionsAsService/ScienceEncyclopedia/issues/new">Open an issue on GitHub</a></p>
+<p class="small">The previous version of this site, a one-page shell, is kept on the <code>legacy/pre-redesign</code> branch of the repository.</p></section>
+</main>
+<footer class="foot">
+  <nav class="footnav" aria-label="Pages"><a href="index.html">Home</a><a href="topics.html">Topics</a><a href="elements.html">Elements</a><a href="balance.html">Balance</a><a href="constants.html">Constants</a><a href="about.html">About</a></nav>
+  <p><strong>A small, readable reference, not a peer-reviewed one.</strong> Written from general knowledge and not yet checked line by line against primary sources. For work that matters, use IUPAC, CODATA and NIST. Found a mistake? <a href="about.html#corrections">Tell us</a>.</p>
+  <p class="small">Code and text are MIT-licensed. Nothing on this site loads from another domain.</p>
+</footer>
+
+</body>
+</html>

@@ -1,48 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Science Encyclopedia</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Science Encyclopedia: every number says how well it is known</title>
+<meta name="description" content="A small encyclopedia of physics, chemistry, biology and Earth science where every number is marked exact, measured or rounded, with a full periodic table and a working equation balancer.">
+<meta property="og:title" content="Science Encyclopedia: every number says how well it is known"><meta property="og:description" content="A small encyclopedia of physics, chemistry, biology and Earth science where every number is marked exact, measured or rounded, with a full periodic table and a working equation balancer."><meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <h1>Science Encyclopedia</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#chemistry">Chemistry</a></li>
-                <li><a href="#physics">Physics</a></li>
-                <li><a href="#biology">Biology</a></li>
-                <li><a href="#balance-tool">Balance Equations</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="intro">
-            <h2>Welcome to the Science Encyclopedia</h2>
-            <p>Your go-to place for learning about the wonders of science, including chemistry, physics, and biology.</p>
-        </section>
-        <section id="chemistry">
-            <h2>Chemistry</h2>
-            <p>Learn about atoms, molecules, reactions, and more!</p>
-        </section>
-        <section id="balance-tool">
-            <h2>Balance Chemical Equations</h2>
-            <div id="equation-form">
-                <input type="text" id="chemical-equation" placeholder="Enter unbalanced equation">
-                <button id="balance-btn">Balance</button>
-                <p id="balanced-equation"></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Science Encyclopedia</p>
-    </footer>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="mast">
+  <a class="brand" href="index.html"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" focusable="false"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="2" width="9" height="9" rx="1.5" class="o"/><rect x="2" y="13" width="9" height="9" rx="1.5" class="o"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></svg>Science Encyclopedia</a>
+  <nav aria-label="Pages"><a href="topics.html">Topics</a><a href="elements.html">Elements</a><a href="balance.html">Balance</a><a href="constants.html">Constants</a><a href="about.html">About</a></nav>
+</header>
+<main id="main">
 
-    <script src="script.js"></script>
+<section class="hero" aria-labelledby="h1">
+  <div class="hero-copy">
+    <p class="kicker">Physics · Chemistry · Biology · Earth</p>
+    <h1 id="h1">Science Encyclopedia</h1>
+    <p class="lede">A small reference where every number tells you how well it is known: exact by definition, measured, or rounded.</p>
+    <p class="cta"><a class="btn" href="elements.html">Open the periodic table</a><a class="btn ghost" href="balance.html">Balance an equation</a></p>
+  </div>
+  <figure class="silwrap">
+    <svg class="sil" viewBox="0 0 614 318" aria-hidden="true" focusable="false"><defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" class="hb"/><line x1="0" y1="0" x2="0" y2="6" class="hl" stroke-width="3"/></pattern></defs><rect x="1" y="1" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="579" y="1" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="1" y="35" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="35" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="35" width="30" height="30" rx="3" class="c c-metalloid"/><rect x="443" y="35" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="477" y="35" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="511" y="35" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="545" y="35" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="579" y="35" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="1" y="69" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="69" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="69" width="30" height="30" rx="3" class="c c-metal"/><rect x="443" y="69" width="30" height="30" rx="3" class="c c-metalloid"/><rect x="477" y="69" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="511" y="69" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="545" y="69" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="579" y="69" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="1" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="69" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="103" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="137" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="171" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="205" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="239" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="273" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="307" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="341" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="375" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="103" width="30" height="30" rx="3" class="c c-metal"/><rect x="443" y="103" width="30" height="30" rx="3" class="c c-metalloid"/><rect x="477" y="103" width="30" height="30" rx="3" class="c c-metalloid"/><rect x="511" y="103" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="545" y="103" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="579" y="103" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="1" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="69" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="103" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="137" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="171" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="205" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="239" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="273" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="307" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="341" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="375" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="443" y="137" width="30" height="30" rx="3" class="c c-metal"/><rect x="477" y="137" width="30" height="30" rx="3" class="c c-metalloid"/><rect x="511" y="137" width="30" height="30" rx="3" class="c c-metalloid"/><rect x="545" y="137" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="579" y="137" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="1" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="1" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="69" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="103" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="137" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="171" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="205" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="239" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="273" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="307" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="341" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="375" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="443" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="477" y="251" width="30" height="30" rx="3" class="c c-metal"/><rect x="103" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="137" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="171" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="205" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="239" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="273" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="307" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="341" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="375" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="443" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="477" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="511" y="171" width="30" height="30" rx="3" class="c c-metal"/><rect x="545" y="171" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="579" y="171" width="30" height="30" rx="3" class="c c-nonmetal"/><rect x="1" y="205" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="205" width="30" height="30" rx="3" class="c c-metal"/><rect x="1" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="35" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="69" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="103" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="137" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="171" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="205" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="239" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="273" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="307" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="341" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="375" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="409" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="443" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="477" y="285" width="30" height="30" rx="3" class="c c-metal"/><rect x="103" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="137" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="171" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="205" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="239" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="273" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="307" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="341" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="375" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="409" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="443" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="477" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="511" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="545" y="205" width="30" height="30" rx="3" class="c c-metal sup"/><rect x="579" y="205" width="30" height="30" rx="3" class="c c-metal sup"/></svg>
+    <figcaption>One square per element, 118 in all, placed by period (row) and group (column). Solid: 94 metals. Hatched: 6 metalloids. Outlined: 18 nonmetals. Dashed edge: the 15 superheavy elements, whose chemistry is mostly predicted, not measured. <a class="more" href="elements.html">Explore the table</a></figcaption>
+  </figure>
+</section>
+
+<section class="band" aria-labelledby="h-marks">
+  <h2 id="h-marks" class="sech">How sure is that number?</h2>
+  <p class="lede2">Textbooks print 299,792,458 and 6.674 with the same confidence, although one is a definition and the other is a measurement. Here every number carries a mark.</p>
+  <ul class="nums"><li class="num n-exact"><span class="lab">Speed of light in a vacuum</span><span class="val">299 792 458 m/s</span><span class="mk mk-exact"><i aria-hidden="true"></i>Exact</span></li><li class="num n-measured"><span class="lab">Gravitational constant, G</span><span class="val">6.674 30(15) × 10⁻¹¹ m³ kg⁻¹ s⁻²</span><span class="mk mk-measured"><i aria-hidden="true"></i>Measured</span></li><li class="num n-rounded"><span class="lab">GPS clock offset from relativity</span><span class="val">about 38 µs per day</span><span class="mk mk-rounded"><i aria-hidden="true"></i>Rounded</span></li></ul>
+  <p><a class="more" href="about.html#marks">What the three marks mean</a></p>
+</section>
+
+<section aria-labelledby="h-tools">
+  <h2 id="h-tools" class="sech">Start with a tool</h2>
+  <ul class="cards">
+    <li class="card"><h3><a href="elements.html">The periodic table</a></h3><p>All 118 elements, filterable, with period, group and which have no stable isotope (37 of them).</p></li>
+    <li class="card"><h3><a href="balance.html">Equation balancer</a></h3><p>Type an unbalanced reaction and get the smallest whole-number coefficients, solved exactly.</p></li>
+    <li class="card"><h3><a href="constants.html">Constants</a></h3><p>The defining constants of the SI and a few measured ones, each marked.</p></li>
+  </ul>
+</section>
+
+<section aria-labelledby="h-topics">
+  <h2 id="h-topics" class="sech">23 topics in four fields</h2>
+  <div class="cols"><div><h3>Physics</h3><ul class="links"><li><a href="topics/newtons-laws.html">Newton&#x27;s laws of motion</a></li><li><a href="topics/energy.html">Conservation of energy</a></li><li><a href="topics/thermodynamics.html">The laws of thermodynamics</a></li><li><a href="topics/light.html">Light and the electromagnetic spectrum</a></li><li><a href="topics/relativity.html">Relativity</a></li><li><a href="topics/quantum-mechanics.html">Quantum mechanics</a></li><li><a href="topics/electricity.html">Electric charge, current and Ohm&#x27;s law</a></li></ul></div><div><h3>Chemistry</h3><ul class="links"><li><a href="topics/atom.html">The atom</a></li><li><a href="topics/periodic-law.html">The periodic law and the periodic table</a></li><li><a href="topics/bonds.html">Chemical bonds</a></li><li><a href="topics/the-mole.html">The mole and Avogadro&#x27;s constant</a></li><li><a href="topics/acids-and-bases.html">Acids, bases and pH</a></li><li><a href="topics/balancing-equations.html">Balancing chemical equations</a></li><li><a href="topics/redox.html">Oxidation and reduction</a></li></ul></div><div><h3>Biology</h3><ul class="links"><li><a href="topics/cell.html">The cell</a></li><li><a href="topics/dna.html">DNA</a></li><li><a href="topics/genetics.html">Heredity and genetics</a></li><li><a href="topics/evolution.html">Evolution by natural selection</a></li><li><a href="topics/photosynthesis.html">Photosynthesis</a></li><li><a href="topics/respiration.html">Cellular respiration</a></li></ul></div><div><h3>Earth and space</h3><ul class="links"><li><a href="topics/plate-tectonics.html">Plate tectonics</a></li><li><a href="topics/water-cycle.html">The water cycle</a></li><li><a href="topics/solar-system.html">The Solar System</a></li></ul></div></div>
+  <p><a class="more" href="topics.html">See all topics</a></p>
+</section>
+</main>
+<footer class="foot">
+  <nav class="footnav" aria-label="Pages"><a href="index.html">Home</a><a href="topics.html">Topics</a><a href="elements.html">Elements</a><a href="balance.html">Balance</a><a href="constants.html">Constants</a><a href="about.html">About</a></nav>
+  <p><strong>A small, readable reference, not a peer-reviewed one.</strong> Written from general knowledge and not yet checked line by line against primary sources. For work that matters, use IUPAC, CODATA and NIST. Found a mistake? <a href="about.html#corrections">Tell us</a>.</p>
+  <p class="small">Code and text are MIT-licensed. Nothing on this site loads from another domain.</p>
+</footer>
+
 </body>
 </html>
