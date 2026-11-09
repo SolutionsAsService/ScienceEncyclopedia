@@ -197,7 +197,7 @@ def elements_page():
   <h2 id="h-grid" class="sr">The table</h2>
   <div class="tools" id="pt-tools" hidden>
     <div class="chips" id="class-chips" role="group" aria-label="Filter by kind">{chips}</div>
-    <label class="check"><input type="checkbox" id="nostable"> Only elements with no stable isotope ({NNOSTABLE})</label>
+    <button type="button" class="chip" id="nostable" aria-pressed="false">No stable isotope ({NNOSTABLE})</button>
     <label class="f"><span class="label">Find</span><input id="q" type="search" placeholder="name or symbol" autocomplete="off"></label>
   </div>
   <p class="count" id="count" role="status" aria-live="polite"></p>

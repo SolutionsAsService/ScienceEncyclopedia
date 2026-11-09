@@ -41,7 +41,9 @@
       $$("#class-chips button").forEach(function (x) { var on = x === b; x.classList.toggle("on", on); x.setAttribute("aria-pressed", on ? "true" : "false"); });
       apply();
     });
-    $("#nostable").addEventListener("change", function (ev) { ns = ev.target.checked; apply(); });
+    $("#nostable").addEventListener("click", function (ev) {
+      ns = !ns; ev.currentTarget.classList.toggle("on", ns); ev.currentTarget.setAttribute("aria-pressed", ns ? "true" : "false"); apply();
+    });
     $("#q").addEventListener("input", function (ev) { q = ev.target.value.trim().toLowerCase(); apply(); });
     var showEl = function (z, push) {
       var r = rows[z]; if (!r) return;

@@ -24,7 +24,7 @@
   <h2 id="h-grid" class="sr">The table</h2>
   <div class="tools" id="pt-tools" hidden>
     <div class="chips" id="class-chips" role="group" aria-label="Filter by kind"><button type="button" class="chip on" data-class="">All 118</button><button type="button" class="chip" data-class="metal"><svg class="gl gl-metal" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="2"/></svg>Metals 94</button><button type="button" class="chip" data-class="metalloid"><svg class="gl gl-metalloid" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="2"/><path d="M3 13 13 3M3 8 8 3M8 13 13 8" stroke="currentColor" stroke-width="1.5"/></svg>Metalloids 6</button><button type="button" class="chip" data-class="nonmetal"><svg class="gl gl-nonmetal" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><rect x="1.5" y="1.5" width="13" height="13" rx="6"/></svg>Nonmetals 18</button></div>
-    <label class="check"><input type="checkbox" id="nostable"> Only elements with no stable isotope (37)</label>
+    <button type="button" class="chip" id="nostable" aria-pressed="false">No stable isotope (37)</button>
     <label class="f"><span class="label">Find</span><input id="q" type="search" placeholder="name or symbol" autocomplete="off"></label>
   </div>
   <p class="count" id="count" role="status" aria-live="polite"></p>
