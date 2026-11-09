@@ -50,3 +50,6 @@ S1 not met (no R2). S2 not met (round 1's changes were judged by measurement and
 - Balancer does not support ions and charges, or isotopes.
 - Repeated legends (marks explained on four pages).
 - Topic prose is short; no figures or diagrams beyond the table and the marks.
+
+## Grade of round 1: B+ (recorded by the owner, 2026-11-09)
+The site is added to the studio portfolio (guides group). The look is now the adopted dada design pack `lab-notebook` 1.0.0 (grade B+). The previous version is kept on the branch `legacy/pre-redesign`. What stands between B+ and A is the Open list above, chiefly that the content has not been checked against IUPAC, CODATA or NIST and that no second panel round was run.
