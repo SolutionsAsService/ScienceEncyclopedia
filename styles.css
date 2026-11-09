@@ -148,3 +148,18 @@ tbody th { font-weight: 600; } .sym { display: inline-block; min-width: 2.2em; f
 @media print { .mast nav, .tools, .skip, .chips { display: none; } body { background: #fff; color: #000; } }
 
 .swipe { margin: 0 0 .4rem; } @media (min-width: 760px) { .swipe { display: none; } }
+
+/* round 1 resolutions */
+.sil .c-unconfirmed { fill: none; } .sil .c-unconfirmed.sup { stroke-dasharray: 1 4; stroke-linecap: round; stroke: var(--ink); }
+.cell.c-unconfirmed { border-style: dotted; border-width: 3px; }
+.gl-unconfirmed rect { stroke-dasharray: 1.5 3; stroke-linecap: round; }
+.cell.dim { opacity: .45; }
+.card h3 a { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+details.tools { margin: 0 0 .6rem; } details.tools > summary { list-style: none; cursor: pointer; display: inline-flex; align-items: center; min-height: 44px; padding: 0 1rem; border: 2px solid var(--ink); border-radius: 999px; font: 700 15px var(--sans); }
+details.tools > summary::-webkit-details-marker { display: none; } details.tools[open] > summary { background: var(--ink); color: var(--paper); }
+details.tools[hidden] { display: none; } details.tools > .chips, details.tools > .f { margin-top: .8rem; } details.tools > .f { max-width: 22rem; }
+.detail { position: sticky; bottom: .6rem; z-index: 5; box-shadow: 0 8px 24px rgba(0,0,0,.22); margin: .6rem 0 0; padding: .7rem 1rem; grid-template-columns: 1fr; gap: .1rem; }
+.detail .top { display: flex; align-items: baseline; gap: .7rem; flex-wrap: wrap; } .detail .big { font: 800 2rem/1 var(--sans); letter-spacing: -.03em; } .detail .nm { font: 700 1.1rem var(--sans); } .detail .z2 { color: var(--ink3); font-size: 15px; }
+.detail .meta { margin: 0; font-size: 15px; color: var(--ink2); } .detail .x { position: absolute; right: .3rem; top: .3rem; min-width: 44px; min-height: 44px; background: none; border: 0; font-size: 26px; line-height: 1; color: var(--ink2); cursor: pointer; }
+@media (max-width: 759px) { .ptscroll { -webkit-mask-image: linear-gradient(90deg, #000 88%, transparent); mask-image: linear-gradient(90deg, #000 88%, transparent); } .ptscroll.at-end { -webkit-mask-image: none; mask-image: none; } }
+.result .notes { font-size: 15px; color: var(--ink3); margin: .6rem 0 0; }

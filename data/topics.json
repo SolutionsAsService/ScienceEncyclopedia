@@ -1,188 +1,529 @@
 {
  "fields": [
-  {"id": "physics", "name": "Physics"},
-  {"id": "chemistry", "name": "Chemistry"},
-  {"id": "biology", "name": "Biology"},
-  {"id": "earth", "name": "Earth and space"}
+  {
+   "id": "physics",
+   "name": "Physics"
+  },
+  {
+   "id": "chemistry",
+   "name": "Chemistry"
+  },
+  {
+   "id": "biology",
+   "name": "Biology"
+  },
+  {
+   "id": "earth",
+   "name": "Earth and space"
+  }
  ],
  "marks": [
-  {"id": "exact", "name": "Exact", "rule": "solid", "blurb": "Exact by definition. The number is part of how the unit or constant is defined, so it has no uncertainty."},
-  {"id": "measured", "name": "Measured", "rule": "dashed", "blurb": "Found by experiment. The figure in brackets is the uncertainty in the last digits, and later measurements may refine it."},
-  {"id": "rounded", "name": "Rounded", "rule": "dotted", "blurb": "Rounded for readability, or a typical value that varies. Do not use it where precision matters; use the measured figure."}
+  {
+   "id": "exact",
+   "name": "Exact",
+   "rule": "solid",
+   "blurb": "Exact by definition or by agreed convention. The number is part of how the unit or constant is defined, so it has no uncertainty."
+  },
+  {
+   "id": "measured",
+   "name": "Measured",
+   "rule": "dashed",
+   "blurb": "Found by experiment. The figure in brackets is the uncertainty in the last digits, and later measurements may refine it."
+  },
+  {
+   "id": "rounded",
+   "name": "Rounded",
+   "rule": "dotted",
+   "blurb": "Shown to fewer digits than it is known, or a typical value that varies from case to case. Rounded does not mean poorly known: the electron's mass is known far better than the gravitational constant. Check the source for more digits."
+  }
  ],
  "topics": [
-  {"slug": "newtons-laws", "title": "Newton's laws of motion", "field": "physics",
+  {
+   "slug": "newtons-laws",
+   "title": "Newton's laws of motion",
+   "field": "physics",
    "summary": "Three statements about force and motion that explain most everyday mechanics.",
    "body": [
     "The first law says a body keeps its state of rest or of uniform motion in a straight line unless a net force acts on it. The second says the net force on a body equals the rate of change of its momentum; for a body of constant mass this is F = ma, so the same force gives a lighter body a larger acceleration. The third says that when one body pushes on another, the second pushes back on the first with an equal and opposite force.",
-    "The two forces in the third law act on different bodies, which is why they do not cancel. The laws work well for ordinary speeds and sizes. They need replacing by special relativity near the speed of light and by quantum mechanics at atomic scales."],
-   "numbers": [{"label": "Standard acceleration of gravity, gn", "value": "9.80665 m/s²", "mark": "exact", "note": "A conventional standard value, not the local value of gravity, which varies by place."}],
-   "related": ["energy", "relativity"]},
-  {"slug": "energy", "title": "Conservation of energy", "field": "physics",
-   "summary": "Energy changes form but, in a closed system, its total stays the same.",
+    "The two forces in the third law act on different bodies, which is why they do not cancel. The laws work well for ordinary speeds and sizes. They need replacing by special relativity near the speed of light and by quantum mechanics at atomic scales."
+   ],
+   "numbers": [
+    {
+     "label": "Standard acceleration of gravity, gn",
+     "value": "9.80665 m/s²",
+     "mark": "exact",
+     "note": "A conventional standard value, not the local value of gravity, which varies by place."
+    }
+   ],
+   "related": [
+    "energy",
+    "relativity"
+   ]
+  },
+  {
+   "slug": "energy",
+   "title": "Conservation of energy",
+   "field": "physics",
+   "summary": "Energy changes form but, in an isolated system, its total stays the same.",
    "body": [
     "Energy appears as motion (kinetic energy, ½mv²), position in a field (near Earth's surface a mass m raised a height h has gravitational potential energy mgh), heat, light, chemical bonds and more. A falling ball turns potential energy into kinetic energy; friction turns some of it into heat. The total, counting the heat, does not change.",
-    "The SI unit is the joule: the energy transferred when a force of one newton acts through one metre. The calorie used in chemistry and nutrition is a different unit, defined by the exact conversion below."],
-   "numbers": [{"label": "1 thermochemical calorie", "value": "4.184 J", "mark": "exact", "note": "A food Calorie (kcal) is 1000 of these."}],
-   "related": ["thermodynamics", "newtons-laws"]},
-  {"slug": "thermodynamics", "title": "The laws of thermodynamics", "field": "physics",
+    "The SI unit is the joule: the energy transferred when a force of one newton acts through one metre. The calorie used in chemistry and nutrition is a different unit, defined by the exact conversion below."
+   ],
+   "numbers": [
+    {
+     "label": "1 thermochemical calorie",
+     "value": "4.184 J",
+     "mark": "exact",
+     "note": "A food Calorie (kcal) is 1000 of these."
+    }
+   ],
+   "related": [
+    "thermodynamics",
+    "newtons-laws"
+   ]
+  },
+  {
+   "slug": "thermodynamics",
+   "title": "The laws of thermodynamics",
+   "field": "physics",
    "summary": "Four rules about heat, work, energy and the direction in which processes run.",
    "body": [
     "The zeroth law says that two bodies each in thermal equilibrium with a third are in equilibrium with each other, which is what makes temperature well defined. The first law is conservation of energy applied to heat and work. The second law says that the total entropy of an isolated system does not decrease, which is why heat flows from hot to cold and not the other way unprompted. The third law says that entropy approaches a constant as temperature approaches absolute zero, and that absolute zero cannot be reached in a finite number of steps.",
-    "Entropy is often described as disorder; a more careful reading is that it counts how many microscopic arrangements are consistent with what we see at large scale."],
-   "numbers": [{"label": "Absolute zero", "value": "0 K = −273.15 °C", "mark": "exact", "note": "The Celsius scale is defined as the kelvin scale shifted by exactly 273.15."}],
-   "related": ["energy", "quantum-mechanics"]},
-  {"slug": "light", "title": "Light and the electromagnetic spectrum", "field": "physics",
+    "Entropy is often described as disorder; a more careful reading is that it counts how many microscopic arrangements are consistent with what we see at large scale."
+   ],
+   "numbers": [
+    {
+     "label": "Absolute zero",
+     "value": "0 K = −273.15 °C",
+     "mark": "exact",
+     "note": "The Celsius scale is defined as the kelvin scale shifted by exactly 273.15."
+    }
+   ],
+   "related": [
+    "energy",
+    "quantum-mechanics"
+   ]
+  },
+  {
+   "slug": "light",
+   "title": "Light and the electromagnetic spectrum",
+   "field": "physics",
    "summary": "Visible light is one narrow band of a continuous spectrum of electromagnetic waves.",
    "body": [
     "Radio waves, microwaves, infrared, visible light, ultraviolet, X-rays and gamma rays are the same kind of wave, an oscillating electric and magnetic field, differing in wavelength. In a vacuum all of them travel at the same speed, and wavelength λ and frequency ν are linked by c = λν. Shorter wavelengths carry more energy per photon.",
-    "People see roughly from violet to red. The edges of that band vary between people and between sources, so any quoted range is approximate."],
+    "People see roughly from violet to red. The edges of that band vary between people and between sources, so any quoted range is approximate."
+   ],
    "numbers": [
-    {"label": "Speed of light in a vacuum, c", "value": "299 792 458 m/s", "mark": "exact", "note": "The metre is defined from this value."},
-    {"label": "Visible wavelengths", "value": "about 380 to 750 nm", "mark": "rounded", "note": "Edges differ by person and by source."}],
-   "related": ["quantum-mechanics", "relativity"]},
-  {"slug": "relativity", "title": "Relativity", "field": "physics",
+    {
+     "label": "Speed of light in a vacuum, c",
+     "value": "299 792 458 m/s",
+     "mark": "exact",
+     "note": "The metre is defined from this value."
+    },
+    {
+     "label": "Visible wavelengths",
+     "value": "about 380 to 750 nm",
+     "mark": "rounded",
+     "note": "Edges differ by person and by source."
+    }
+   ],
+   "related": [
+    "quantum-mechanics",
+    "relativity"
+   ]
+  },
+  {
+   "slug": "relativity",
+   "title": "Relativity",
+   "field": "physics",
    "summary": "Special relativity changes how space and time fit together at high speed; general relativity treats gravity as the curvature of spacetime.",
    "body": [
     "Special relativity rests on two ideas: the laws of physics are the same in every frame moving at constant velocity, and the speed of light in a vacuum is the same for all observers. From them follow time dilation, length contraction, and the equivalence of mass and energy, E = mc² for a body at rest.",
-    "General relativity extends this to gravity: mass and energy curve spacetime, and free-falling bodies follow the straightest paths through it. The satellite navigation system relies on both theories, because its clocks run at slightly different rates from clocks on the ground."],
-   "numbers": [{"label": "Net clock offset of a GPS satellite relative to the ground", "value": "about 38 µs per day", "mark": "rounded", "note": "About 45 µs fast from weaker gravity and about 7 µs slow from orbital speed."}],
-   "related": ["light", "newtons-laws"]},
-  {"slug": "quantum-mechanics", "title": "Quantum mechanics", "field": "physics",
+    "General relativity extends this to gravity: mass and energy curve spacetime, and free-falling bodies follow the straightest paths through it. The Global Positioning System relies on both theories, because its satellite clocks run at slightly different rates from clocks on the ground."
+   ],
+   "numbers": [
+    {
+     "label": "Net drift of a GPS satellite clock against a ground clock, from relativity",
+     "value": "about 38 µs gained per day",
+     "mark": "rounded",
+     "note": "Calculated for a typical GPS orbit: about 45 µs gained from weaker gravity and about 7 µs lost from orbital speed. The system is designed to correct for it."
+    }
+   ],
+   "related": [
+    "light",
+    "newtons-laws"
+   ]
+  },
+  {
+   "slug": "quantum-mechanics",
+   "title": "Quantum mechanics",
+   "field": "physics",
    "summary": "The theory of matter and light at atomic scales, where energy comes in discrete amounts and particles behave like waves.",
    "body": [
     "Light is absorbed and emitted in packets called photons, each with energy E = hν. Electrons bound in atoms can only have certain energies, which is why each element emits and absorbs light at characteristic wavelengths. Particles also show wave behaviour: a beam of electrons sent through two narrow slits builds up an interference pattern one electron at a time.",
-    "The uncertainty principle says that position and momentum cannot both be known exactly: the product of their uncertainties is at least ħ/2, where ħ = h/2π. This is a property of nature and not a limit of our instruments."],
-   "numbers": [{"label": "Planck constant, h", "value": "6.626 070 15 × 10⁻³⁴ J·s", "mark": "exact", "note": "Fixed by the 2019 redefinition of the SI."}],
-   "related": ["atom", "light"]},
-  {"slug": "electricity", "title": "Electric charge, current and Ohm's law", "field": "physics",
+    "The uncertainty principle says that position and momentum cannot both be known exactly: the product of their uncertainties is at least ħ/2, where ħ = h/2π. This is a property of nature and not a limit of our instruments."
+   ],
+   "numbers": [
+    {
+     "label": "Planck constant, h",
+     "value": "6.626 070 15 × 10⁻³⁴ J·s",
+     "mark": "exact",
+     "note": "Fixed by the 2019 redefinition of the SI."
+    }
+   ],
+   "related": [
+    "atom",
+    "light"
+   ]
+  },
+  {
+   "slug": "electricity",
+   "title": "Electric charge, current and Ohm's law",
+   "field": "physics",
    "summary": "Electric current is a flow of charge, and in many materials the current is proportional to the voltage.",
    "body": [
     "Charge comes in two kinds; like charges repel and unlike charges attract, with a force that falls with the square of the distance (Coulomb's law). Current is the rate of flow of charge, measured in amperes. In many conductors, at constant temperature, the current I through a component is proportional to the voltage V across it, and V = IR defines the resistance R in ohms.",
-    "Not every component is ohmic. A diode or a light bulb filament does not obey V = IR with a constant R."],
-   "numbers": [{"label": "Elementary charge, e", "value": "1.602 176 634 × 10⁻¹⁹ C", "mark": "exact", "note": "Fixed by the 2019 redefinition of the SI; the coulomb is defined from it."}],
-   "related": ["atom", "energy"]},
-  {"slug": "atom", "title": "The atom", "field": "chemistry",
+    "Not every component is ohmic. A diode or a light bulb filament does not obey V = IR with a constant R."
+   ],
+   "numbers": [
+    {
+     "label": "Elementary charge, e",
+     "value": "1.602 176 634 × 10⁻¹⁹ C",
+     "mark": "exact",
+     "note": "Fixed by the 2019 redefinition of the SI; the coulomb is defined from it."
+    }
+   ],
+   "related": [
+    "atom",
+    "energy"
+   ]
+  },
+  {
+   "slug": "atom",
+   "title": "The atom",
+   "field": "chemistry",
    "summary": "The smallest unit of an element: a dense nucleus of protons and neutrons surrounded by electrons.",
    "body": [
     "The number of protons, the atomic number, decides which element an atom is. Atoms of one element with different numbers of neutrons are isotopes. Electrons carry negative charge and occupy regions around the nucleus; a neutral atom has as many electrons as protons. Almost all of an atom's mass is in its nucleus.",
-    "Chemistry is mostly the behaviour of the outermost electrons: how atoms share or transfer them to form bonds."],
+    "Chemistry is mostly the behaviour of the outermost electrons: how atoms share or transfer them to form bonds."
+   ],
    "numbers": [
-    {"label": "Typical atomic diameter", "value": "about 10⁻¹⁰ m", "mark": "rounded", "note": "Varies by element and by how it is measured."},
-    {"label": "Proton mass", "value": "1.673 × 10⁻²⁷ kg", "mark": "rounded"},
-    {"label": "Neutron mass", "value": "1.675 × 10⁻²⁷ kg", "mark": "rounded"},
-    {"label": "Electron mass", "value": "9.109 × 10⁻³¹ kg", "mark": "rounded", "note": "About 1/1836 of a proton."}],
-   "related": ["periodic-law", "bonds"]},
-  {"slug": "periodic-law", "title": "The periodic law and the periodic table", "field": "chemistry",
+    {
+     "label": "Typical atomic diameter",
+     "value": "about 10⁻¹⁰ m",
+     "mark": "rounded",
+     "note": "Varies by element and by how it is measured."
+    },
+    {
+     "label": "Proton mass",
+     "value": "1.673 × 10⁻²⁷ kg",
+     "mark": "rounded"
+    },
+    {
+     "label": "Neutron mass",
+     "value": "1.675 × 10⁻²⁷ kg",
+     "mark": "rounded"
+    },
+    {
+     "label": "Electron mass",
+     "value": "9.109 × 10⁻³¹ kg",
+     "mark": "rounded",
+     "note": "About 1/1836 of a proton."
+    }
+   ],
+   "related": [
+    "periodic-law",
+    "bonds"
+   ]
+  },
+  {
+   "slug": "periodic-law",
+   "title": "The periodic law and the periodic table",
+   "field": "chemistry",
    "summary": "When the elements are ordered by atomic number, their properties repeat at regular intervals.",
    "body": [
     "Dmitri Mendeleev published his table in 1869, ordering the elements mainly by atomic mass and leaving gaps where the pattern implied an element was missing. He predicted properties for three of them, which were later found and called gallium, scandium and germanium. In 1913 Henry Moseley showed that the true ordering variable is atomic number, the count of protons.",
-    "Columns (groups) share chemical behaviour because their atoms have similar outer-electron arrangements. Rows (periods) correspond to the filling of successive electron shells. See the full table on the elements page."],
-   "numbers": [{"label": "Known elements", "value": "118", "mark": "exact", "note": "Atomic numbers 1 to 118, all named."}],
-   "related": ["atom", "bonds"]},
-  {"slug": "bonds", "title": "Chemical bonds", "field": "chemistry",
+    "Columns (groups) share chemical behaviour because their atoms have similar outer-electron arrangements. Rows (periods) correspond to the filling of successive groups of electron orbitals. As of this writing the table has 118 named elements, atomic numbers 1 to 118. See the full table on the elements page."
+   ],
+   "numbers": [],
+   "related": [
+    "atom",
+    "bonds"
+   ]
+  },
+  {
+   "slug": "bonds",
+   "title": "Chemical bonds",
+   "field": "chemistry",
    "summary": "The attractions that hold atoms together in compounds, metals and molecules.",
    "body": [
     "In an ionic bond one atom gives electrons to another and the resulting oppositely charged ions attract, as in sodium chloride. In a covalent bond atoms share electrons, as in the molecules of water or methane. In a metal, outer electrons are shared across the whole lattice, which is why metals conduct electricity.",
-    "Electronegativity, an atom's pull on shared electrons, helps predict which kind of bond forms. Most real bonds are in between: a bond between two different atoms is usually polar, with the shared electrons shifted toward one of them."],
+    "Electronegativity, an atom's pull on shared electrons, helps predict which kind of bond forms. Most real bonds are in between: a bond between two different atoms is usually polar, with the shared electrons shifted toward one of them."
+   ],
    "numbers": [],
-   "related": ["atom", "acids-and-bases"]},
-  {"slug": "the-mole", "title": "The mole and Avogadro's constant", "field": "chemistry",
+   "related": [
+    "atom",
+    "acids-and-bases"
+   ]
+  },
+  {
+   "slug": "the-mole",
+   "title": "The mole and Avogadro's constant",
+   "field": "chemistry",
    "summary": "The mole is the chemist's counting unit: a fixed, very large number of particles.",
    "body": [
     "One mole of any substance contains the same number of entities, whether atoms, molecules or ions. Since 2019 that number is fixed exactly and defines the mole. The molar mass of a substance, in grams per mole, is close to its relative atomic or molecular mass, which lets a chemist weigh out a known number of particles.",
-    "Before 2019 the mole was defined through twelve grams of carbon-12. That is now only approximately true."],
-   "numbers": [{"label": "Avogadro constant, NA", "value": "6.022 140 76 × 10²³ per mole", "mark": "exact", "note": "Fixed by the 2019 redefinition of the SI."}],
-   "related": ["balancing-equations", "atom"]},
-  {"slug": "acids-and-bases", "title": "Acids, bases and pH", "field": "chemistry",
+    "Before 2019 the mole was defined through twelve grams of carbon-12. That is now only approximately true."
+   ],
+   "numbers": [
+    {
+     "label": "Avogadro constant, NA",
+     "value": "6.022 140 76 × 10²³ per mole",
+     "mark": "exact",
+     "note": "Fixed by the 2019 redefinition of the SI."
+    }
+   ],
+   "related": [
+    "balancing-equations",
+    "atom"
+   ]
+  },
+  {
+   "slug": "acids-and-bases",
+   "title": "Acids, bases and pH",
+   "field": "chemistry",
    "summary": "A scale for how acidic or basic a water solution is, based on its hydrogen ion concentration.",
    "body": [
     "In the Brønsted–Lowry picture an acid gives away a proton and a base accepts one. The pH of a solution is the negative base-10 logarithm of the hydrogen ion activity, in practice often the concentration in moles per litre. Each pH unit is a factor of ten, so a solution of pH 3 is ten times more acidic than one of pH 4.",
-    "At 25 °C pure water is neutral at pH 7. Many everyday solutions fall between 0 and 14, but strong acids and bases can go outside that range."],
-   "numbers": [{"label": "Ion product of water, Kw, at 25 °C", "value": "about 1.0 × 10⁻¹⁴", "mark": "rounded", "note": "Depends on temperature."}],
-   "related": ["bonds", "redox"]},
-  {"slug": "balancing-equations", "title": "Balancing chemical equations", "field": "chemistry",
+    "At 25 °C pure water is neutral at pH 7. Many everyday solutions fall between 0 and 14, but strong acids and bases can go outside that range."
+   ],
+   "numbers": [
+    {
+     "label": "Ion product of water, Kw, at 25 °C",
+     "value": "about 1.0 × 10⁻¹⁴",
+     "mark": "rounded",
+     "note": "Depends on temperature."
+    }
+   ],
+   "related": [
+    "bonds",
+    "redox"
+   ]
+  },
+  {
+   "slug": "balancing-equations",
+   "title": "Balancing chemical equations",
+   "field": "chemistry",
    "summary": "Atoms are neither created nor destroyed in a reaction, so both sides of an equation must contain the same atoms.",
    "body": [
     "Antoine Lavoisier's experiments in the late 1700s established that the total mass is unchanged in a chemical reaction. In an equation this means each element appears the same number of times on both sides. Hydrogen burning in oxygen is balanced as 2 H₂ + O₂ → 2 H₂O: four hydrogen atoms and two oxygen atoms on each side.",
-    "Balancing means choosing the smallest whole-number coefficients that achieve this. The balancer on this site does it by treating each element as a linear equation and solving the system exactly."],
+    "Balancing means choosing the smallest whole-number coefficients that achieve this. The balancer on this site does it by treating each element as a linear equation and solving the system exactly."
+   ],
    "numbers": [],
-   "related": ["the-mole", "redox"],
-   "tool": "balance.html"},
-  {"slug": "redox", "title": "Oxidation and reduction", "field": "chemistry",
+   "related": [
+    "the-mole",
+    "redox"
+   ],
+   "tool": "balance.html"
+  },
+  {
+   "slug": "redox",
+   "title": "Oxidation and reduction",
+   "field": "chemistry",
    "summary": "Reactions in which electrons move from one substance to another.",
    "body": [
     "Oxidation is loss of electrons and reduction is gain of electrons, and the two always occur together. Rusting iron is oxidised by oxygen; the oxygen is reduced. A memory aid is OIL RIG: oxidation is loss, reduction is gain.",
-    "Batteries, corrosion, combustion and the extraction of metals from ores are all redox processes. Oxidation numbers are a bookkeeping device for tracking where the electrons went."],
+    "Batteries, corrosion, combustion and the extraction of metals from ores are all redox processes. Oxidation numbers are a bookkeeping device for tracking where the electrons went."
+   ],
    "numbers": [],
-   "related": ["balancing-equations", "respiration"]},
-  {"slug": "cell", "title": "The cell", "field": "biology",
+   "related": [
+    "balancing-equations",
+    "respiration"
+   ]
+  },
+  {
+   "slug": "cell",
+   "title": "The cell",
+   "field": "biology",
    "summary": "The basic unit of structure and function of living things.",
    "body": [
     "Cell theory, developed in the 1800s by Matthias Schleiden, Theodor Schwann and Rudolf Virchow, says that all living things are made of cells and that cells arise from existing cells. Prokaryotic cells, bacteria and archaea, have no nucleus. Eukaryotic cells, the cells of animals, plants, fungi and protists, keep their DNA in a nucleus and contain organelles such as mitochondria.",
-    "Plant cells also have a cell wall and chloroplasts. Animal cells have neither."],
+    "Plant cells have a cell wall and, in photosynthetic tissue, chloroplasts. Animal cells have neither."
+   ],
    "numbers": [
-    {"label": "Typical bacterial cell length", "value": "about 1 to 10 µm", "mark": "rounded"},
-    {"label": "Typical animal cell diameter", "value": "about 10 to 100 µm", "mark": "rounded"}],
-   "related": ["dna", "photosynthesis"]},
-  {"slug": "dna", "title": "DNA", "field": "biology",
+    {
+     "label": "Typical bacterial cell length",
+     "value": "about 1 to 10 µm",
+     "mark": "rounded"
+    },
+    {
+     "label": "Typical animal cell diameter",
+     "value": "about 10 to 100 µm",
+     "mark": "rounded"
+    }
+   ],
+   "related": [
+    "dna",
+    "photosynthesis"
+   ]
+  },
+  {
+   "slug": "dna",
+   "title": "DNA",
+   "field": "biology",
    "summary": "The molecule that stores hereditary information in nearly all living things.",
    "body": [
-    "DNA is two strands wound into a double helix, as worked out in 1953 by James Watson and Francis Crick using X-ray diffraction data from Rosalind Franklin and Maurice Wilkins. Each strand is a chain of four bases: adenine, thymine, guanine and cytosine. Adenine pairs with thymine and guanine with cytosine, so each strand carries the information needed to rebuild the other.",
-    "Genes are stretches of DNA whose sequence specifies a protein or a functional RNA. The sequence is read in sets of three bases, each set coding for an amino acid."],
-   "numbers": [{"label": "Base pairs in the human genome (one set of chromosomes)", "value": "about 3.1 billion", "mark": "rounded"}],
-   "related": ["genetics", "cell"]},
-  {"slug": "genetics", "title": "Heredity and genetics", "field": "biology",
+    "DNA is two strands wound into a double helix, as worked out in 1953 by James Watson and Francis Crick using X-ray diffraction data from Rosalind Franklin and Maurice Wilkins. Each strand is a chain of units called nucleotides, each carrying one of four bases: adenine, thymine, guanine or cytosine. Adenine pairs with thymine and guanine with cytosine, so each strand carries the information needed to rebuild the other.",
+    "Genes are stretches of DNA whose sequence specifies a protein or a functional RNA. The sequence is read in sets of three bases, each set coding for an amino acid."
+   ],
+   "numbers": [
+    {
+     "label": "Base pairs in the human genome (one set of chromosomes)",
+     "value": "about 3.1 to 3.2 billion",
+     "mark": "rounded"
+    }
+   ],
+   "related": [
+    "genetics",
+    "cell"
+   ]
+  },
+  {
+   "slug": "genetics",
+   "title": "Heredity and genetics",
+   "field": "biology",
    "summary": "How traits are passed from parents to offspring.",
    "body": [
     "Gregor Mendel's work with pea plants, published in 1866, showed that inheritance works through discrete units, now called genes, which come in variants called alleles. An organism usually carries two copies of each gene, and in the simplest cases one allele is dominant over the other.",
-    "Mitosis copies a cell into two genetically identical cells for growth and repair. Meiosis halves the number of chromosome sets to make eggs and sperm, and shuffles the alleles, so offspring differ from their parents and from each other."],
+    "Mitosis copies a cell into two genetically identical cells for growth and repair. Meiosis halves the number of chromosome sets to make eggs and sperm, and shuffles the alleles, so offspring differ from their parents and from each other."
+   ],
    "numbers": [],
-   "related": ["dna", "evolution"]},
-  {"slug": "evolution", "title": "Evolution by natural selection", "field": "biology",
+   "related": [
+    "dna",
+    "evolution"
+   ]
+  },
+  {
+   "slug": "evolution",
+   "title": "Evolution by natural selection",
+   "field": "biology",
    "summary": "How populations change over generations and how species share common ancestors.",
    "body": [
     "Charles Darwin and Alfred Russel Wallace presented the idea of natural selection jointly in 1858, and Darwin set out the full argument in On the Origin of Species in 1859. Individuals in a population vary; some of the variation is inherited; and individuals with traits better suited to their environment tend to leave more offspring, so those traits become more common.",
-    "The evidence comes from many independent sources: the fossil record, similarities in anatomy and in DNA between species, the geographic distribution of species, and evolution observed directly in fast-reproducing organisms."],
+    "The evidence comes from many independent sources: the fossil record, similarities in anatomy and in DNA between species, the geographic distribution of species, and evolution observed directly in fast-reproducing organisms."
+   ],
    "numbers": [],
-   "related": ["genetics", "dna"]},
-  {"slug": "photosynthesis", "title": "Photosynthesis", "field": "biology",
+   "related": [
+    "genetics",
+    "dna"
+   ]
+  },
+  {
+   "slug": "photosynthesis",
+   "title": "Photosynthesis",
+   "field": "biology",
    "summary": "How plants, algae and some bacteria turn light, water and carbon dioxide into sugar and oxygen.",
    "body": [
     "In plants it takes place in chloroplasts. The light reactions use light to split water, releasing oxygen and storing energy in ATP and NADPH. The Calvin cycle uses that energy to fix carbon dioxide into sugars. The overall change can be summarised as 6 CO₂ + 6 H₂O + light energy → C₆H₁₂O₆ + 6 O₂.",
-    "Nearly all the energy that living things use at the surface of Earth comes from sunlight captured this way."],
+    "Nearly all the energy that living things use at the surface of Earth comes from sunlight captured this way."
+   ],
    "numbers": [],
-   "related": ["respiration", "cell"]},
-  {"slug": "respiration", "title": "Cellular respiration", "field": "biology",
+   "related": [
+    "respiration",
+    "cell"
+   ]
+  },
+  {
+   "slug": "respiration",
+   "title": "Cellular respiration",
+   "field": "biology",
    "summary": "How cells release the energy in food as ATP.",
    "body": [
     "Aerobic respiration oxidises glucose with oxygen: C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O, releasing energy that the cell captures as ATP. It runs in three stages: glycolysis in the cytoplasm, the citric acid cycle in the mitochondrial matrix, and oxidative phosphorylation on the inner mitochondrial membrane.",
-    "It is photosynthesis run in reverse in terms of the overall chemistry, which is why the two are described as complementary."],
-   "numbers": [{"label": "ATP made per glucose molecule", "value": "about 30 to 32", "mark": "rounded", "note": "Estimates differ between textbooks and between cell types."}],
-   "related": ["photosynthesis", "redox"]},
-  {"slug": "plate-tectonics", "title": "Plate tectonics", "field": "earth",
+    "The overall equation is the mirror image of photosynthesis, but the cell uses entirely different steps to get there."
+   ],
+   "numbers": [
+    {
+     "label": "ATP made per glucose molecule",
+     "value": "about 30 to 32",
+     "mark": "rounded",
+     "note": "Estimates differ between textbooks and between cell types."
+    }
+   ],
+   "related": [
+    "photosynthesis",
+    "redox"
+   ]
+  },
+  {
+   "slug": "plate-tectonics",
+   "title": "Plate tectonics",
+   "field": "earth",
    "summary": "Earth's outer shell is split into plates that slowly move over the layer beneath.",
    "body": [
     "The lithosphere, the rigid crust and uppermost mantle, is broken into plates that move over the softer asthenosphere. Plates move apart at mid-ocean ridges, collide at convergent boundaries, where one may sink beneath the other, and slide past each other at transform faults. Most earthquakes and volcanoes lie along these boundaries.",
-    "Alfred Wegener proposed continental drift in 1912, but it was accepted only in the 1960s, when seafloor spreading and magnetic stripes in ocean-floor rock supplied a mechanism and evidence."],
-   "numbers": [{"label": "Typical plate speed", "value": "a few centimetres per year", "mark": "rounded", "note": "Roughly the speed at which fingernails grow."}],
-   "related": ["water-cycle", "solar-system"]},
-  {"slug": "water-cycle", "title": "The water cycle", "field": "earth",
+    "Alfred Wegener proposed continental drift in 1912, but it was accepted only in the 1960s, when seafloor spreading and magnetic stripes in ocean-floor rock supplied a mechanism and evidence."
+   ],
+   "numbers": [
+    {
+     "label": "Typical plate speed",
+     "value": "a few centimetres per year",
+     "mark": "rounded",
+     "note": "Roughly the speed at which fingernails grow."
+    }
+   ],
+   "related": [
+    "water-cycle",
+    "solar-system"
+   ]
+  },
+  {
+   "slug": "water-cycle",
+   "title": "The water cycle",
+   "field": "earth",
    "summary": "The continuous movement of water between oceans, air, land and living things.",
    "body": [
     "The Sun's heat evaporates water from oceans, lakes and soil, and plants release more through transpiration. The vapour rises, cools and condenses into clouds, and falls again as rain or snow. On land the water runs off into rivers, soaks into the ground, or is stored as ice, and most of it eventually returns to the sea.",
-    "Most of Earth's water is in the oceans; a small share is fresh water, and much of that is held in ice sheets and glaciers."],
+    "Most of Earth's water is in the oceans; a small share is fresh water, and much of that is held in ice sheets and glaciers."
+   ],
    "numbers": [],
-   "related": ["plate-tectonics", "photosynthesis"]},
-  {"slug": "solar-system", "title": "The Solar System", "field": "earth",
+   "related": [
+    "plate-tectonics",
+    "photosynthesis"
+   ]
+  },
+  {
+   "slug": "solar-system",
+   "title": "The Solar System",
+   "field": "earth",
    "summary": "The Sun and everything held by its gravity, including eight planets.",
    "body": [
     "In order from the Sun the planets are Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune. The first four are rocky; Jupiter and Saturn are mostly hydrogen and helium; Uranus and Neptune are ice giants. The system also holds dwarf planets, moons, asteroids and comets.",
-    "Distances inside the Solar System are measured in astronomical units, defined from the average distance between Earth and the Sun."],
+    "Distances inside the Solar System are measured in astronomical units. The unit was originally based on the average distance between Earth and the Sun, and is now defined as exactly 149 597 870 700 metres."
+   ],
    "numbers": [
-    {"label": "Astronomical unit, au", "value": "149 597 870 700 m", "mark": "exact", "note": "Fixed by the International Astronomical Union in 2012."},
-    {"label": "Mean radius of Earth", "value": "about 6371 km", "mark": "rounded"},
-    {"label": "Age of the Solar System", "value": "about 4.57 billion years", "mark": "rounded", "note": "From the dating of meteorites."}],
-   "related": ["relativity", "plate-tectonics"]}
+    {
+     "label": "Astronomical unit, au",
+     "value": "149 597 870 700 m",
+     "mark": "exact",
+     "note": "Fixed by the International Astronomical Union in 2012."
+    },
+    {
+     "label": "Mean radius of Earth",
+     "value": "about 6371 km",
+     "mark": "rounded"
+    },
+    {
+     "label": "Age of the Solar System",
+     "value": "about 4.57 billion years",
+     "mark": "rounded",
+     "note": "From the dating of meteorites."
+    }
+   ],
+   "related": [
+    "relativity",
+    "plate-tectonics"
+   ]
+  }
  ]
 }

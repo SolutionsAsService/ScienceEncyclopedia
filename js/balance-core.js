@@ -19,7 +19,11 @@
     parts.forEach(function (part, idx) {
       var m = part.match(/^(\d+)(.*)$/);
       var mult = 1;
-      if (m && idx > 0) { mult = parseInt(m[1], 10); part = m[2]; }
+      if (m && idx > 0) {
+        mult = parseInt(m[1], 10); part = m[2];
+        if (mult < 1) throw new Error("A hydrate multiplier of zero in “" + text + "” is not allowed; leave that part out instead.");
+        if (mult > 9999) throw new Error("A hydrate multiplier that large in “" + text + "” is not supported (the limit is 9999).");
+      }
       var counts = parseGroup(part, known);
       Object.keys(counts).forEach(function (el) { total[el] = (total[el] || 0) + counts[el] * mult; });
     });
@@ -27,7 +31,14 @@
   }
   function parseGroup(s, known) {
     var i = 0, stack = [{}];
-    function num() { var j = i; while (i < s.length && /[0-9]/.test(s[i])) i++; return i > j ? parseInt(s.slice(j, i), 10) : 1; }
+    function num() {
+      var j = i; while (i < s.length && /[0-9]/.test(s[i])) i++;
+      if (i === j) return 1;
+      var v = parseInt(s.slice(j, i), 10);
+      if (v < 1) throw new Error("A subscript of zero in “" + s + "” is not allowed; leave the element out instead.");
+      if (v > 9999) throw new Error("A subscript that large in “" + s + "” is not supported (the limit is 9999).");
+      return v;
+    }
     var closers = { ")": "(", "]": "[", "}": "{" };
     var openers = [];
     while (i < s.length) {
@@ -43,6 +54,8 @@
         if (known && !known[sym]) throw new Error("“" + sym + "” is not an element symbol (check the capital letters, for example Co is cobalt and CO is carbon monoxide).");
         var c = num(), cur = stack[stack.length - 1];
         cur[sym] = (cur[sym] || 0) + c;
+      } else if (/[a-z]/.test(ch)) {
+        throw new Error("Element symbols start with a capital letter, for example H2 and not h2. Check “" + s + "”.");
       } else if (/[0-9]/.test(ch)) {
         throw new Error("Unexpected number in “" + s + "”. Write formulas without coefficients, for example H2O.");
       } else if (ch === "+" || ch === "-" || ch === "^" || ch === "−") {
@@ -53,17 +66,28 @@
     return stack[0];
   }
 
-  function splitSide(side) { return side.split(/\s\+\s|\+(?=\s*[A-Z(\[{0-9])/).map(function (x) { return x.trim(); }).filter(Boolean); }
+  function splitSide(side) {
+    var t = side.trim();
+    if (/^\+|\+$/.test(t) || /\+\s*\+/.test(t)) throw new Error("Check the plus signs: one is missing a substance next to it.");
+    return splitRaw(side);
+  }
+  function splitRaw(side) { return side.split(/\s\+\s|\+(?=\s*[A-Z(\[{0-9])/).map(function (x) { return x.trim(); }).filter(Boolean); }
 
   function parseEquation(text, known) {
+    var notes = [];
     var t = text.replace(/→|⟶|=>|-->|->|⇒|=/g, "→");
+    if (/\((s|l|g|aq)\)/.test(t)) { t = t.replace(/\((s|l|g|aq)\)/g, ""); notes.push("State symbols such as (aq) were ignored."); }
     var halves = t.split("→");
     if (halves.length !== 2) throw new Error("Write one equation with an arrow, for example H2 + O2 -> H2O.");
     var L = splitSide(halves[0]), R = splitSide(halves[1]);
     if (!L.length || !R.length) throw new Error("Both sides need at least one substance.");
-    var strip = function (f) { return f.replace(/^\d+\s*(?=[A-Z(\[{])/, ""); };
+    var typed = false;
+    var strip = function (f) { var g = f.replace(/^\d+\s*(?=[A-Z(\[{])/, ""); if (g !== f) typed = true; return g; };
     var names = L.concat(R).map(strip);
-    return { left: names.slice(0, L.length), right: names.slice(L.length), counts: names.map(function (f) { return parseFormula(f, known); }) };
+    if (typed) notes.push("Coefficients you typed were ignored; the balancer works them out.");
+    var left = names.slice(0, L.length), right = names.slice(L.length);
+    left.forEach(function (n) { if (right.indexOf(n) > -1) throw new Error("“" + n + "” appears on both sides. Remove a substance that does not change, or check the formulas."); });
+    return { notes: notes, left: names.slice(0, L.length), right: names.slice(L.length), counts: names.map(function (f) { return parseFormula(f, known); }) };
   }
 
   function balance(text, known) {

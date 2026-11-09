@@ -1,5 +1,5 @@
 {
- "note": "Exact values are fixed by definition of the SI (2019) or by convention. The measured value of G is from the CODATA adjustments; masses are rounded here, and the current precise values are published by CODATA.",
+ "note": "Seven defining constants of the SI, five exact conventions, and five constants known by measurement (one shown with its uncertainty, four rounded). Exact values are fixed by definition of the SI (2019) or by convention; the current precise measured values are published by CODATA.",
  "constants": [
   {
    "symbol": "c",
@@ -91,7 +91,7 @@
   },
   {
    "symbol": "T0",
-   "name": "Zero of the Celsius scale",
+   "name": "Zero of the Celsius scale (convention)",
    "value": "273.15",
    "unit": "K",
    "mark": "exact",
@@ -111,7 +111,7 @@
    "value": "about 1/137.036",
    "unit": "(no unit)",
    "mark": "rounded",
-   "note": "Measured far more precisely than shown; this is a rounded form."
+   "note": "Rounded. It is known far more precisely than G, to about ten digits."
   },
   {
    "symbol": "me",

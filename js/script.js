@@ -21,11 +21,12 @@
   var tools = $("#pt-tools");
   if (tools) {
     tools.hidden = false;
+    if (window.matchMedia("(min-width: 760px)").matches) tools.open = true;
     var cells = $$(".cell"), rows = {}, detail = $("#detail"), count = $("#count"), klass = "", q = "", ns = false;
     $$(".etable tbody tr").forEach(function (r) { rows[r.getAttribute("data-z")] = r; });
     var cls = function (z) { return rows[z].getAttribute("data-class"); };
     var stab = function (z) { return rows[z].getAttribute("data-stable"); };
-    var nm = function (z) { return rows[z].querySelector("th").textContent.toLowerCase(); };
+    var nm = function (z) { var th = rows[z].querySelector("th"); return (th.querySelector(".sym").textContent + " " + th.firstChild.nextSibling.textContent).toLowerCase(); };
     var apply = function () {
       var n = 0;
       cells.forEach(function (c) {
@@ -49,13 +50,25 @@
       var r = rows[z]; if (!r) return;
       var th = r.querySelector("th"), tds = r.querySelectorAll("td");
       var sym = th.querySelector(".sym").textContent;
-      var stableText = { stable: "Yes", none: "None, all isotopes are radioactive", bismuth: "Effectively stable (half-life far longer than the age of the universe)" }[stab(z)];
+      var name = th.firstChild.nextSibling.textContent.trim();
+      var kind = { metal: "metal", metalloid: "metalloid", nonmetal: "nonmetal", unconfirmed: "kind predicted, not measured" }[cls(z)];
+      var stableText = { stable: "stable isotope: yes", none: "no stable isotope", bismuth: "effectively stable" }[stab(z)];
       detail.hidden = false;
-      detail.innerHTML = '<div><div class="big">' + sym + '</div><div>' + th.textContent.replace(sym, "").trim() + '</div></div>' +
-        '<dl><dt>Atomic number</dt><dd>' + z + '</dd><dt>Kind</dt><dd>' + cls(z) + '</dd><dt>Category</dt><dd>' + tds[1].textContent + '</dd><dt>Period</dt><dd>' + tds[2].textContent + '</dd><dt>Group</dt><dd>' + tds[3].textContent + '</dd><dt>Stable isotope</dt><dd>' + stableText + '</dd></dl>';
+      detail.innerHTML = '<button type="button" class="x" aria-label="Close details">\u00d7</button><div class="top"><span class="big">' + sym + '</span><span class="nm">' + name + '</span><span class="z2">No. ' + z + '</span></div>' +
+        '<p class="meta">' + kind + ' \u00b7 ' + tds[1].textContent + ' \u00b7 period ' + tds[2].textContent + ' \u00b7 group ' + tds[3].textContent + ' \u00b7 ' + stableText + '</p>';
       cells.forEach(function (c) { c.classList.toggle("sel", c.getAttribute("data-z") === String(z)); });
       if (push) { try { history.replaceState(null, "", "#e-" + sym); } catch (e) { /* ignore */ } }
     };
+    detail.addEventListener("click", function (ev) {
+      if (ev.target.closest(".x")) { detail.hidden = true; cells.forEach(function (c) { c.classList.remove("sel"); }); }
+    });
+    var scroller = $(".ptscroll");
+    var edge = function () { scroller.classList.toggle("at-end", scroller.scrollLeft + scroller.clientWidth >= scroller.scrollWidth - 4); };
+    scroller.addEventListener("scroll", edge); edge();
+    window.addEventListener("hashchange", function () {
+      var m2 = location.hash.match(/^#e-([A-Za-z]{1,2})$/); if (!m2) return;
+      var tr2 = document.getElementById("e-" + m2[1]); if (tr2) showEl(tr2.getAttribute("data-z"), false);
+    });
     $(".pt").addEventListener("click", function (ev) {
       var c = ev.target.closest(".cell"); if (!c) return; ev.preventDefault(); showEl(c.getAttribute("data-z"), true);
     });
@@ -68,6 +81,7 @@
   var form = $("#balance-form");
   if (form && window.Balancer) {
     var known = JSON.parse($("#known-elements").textContent), out = $("#result"), input = $("#eq");
+    $$(".js-only").forEach(function (el) { el.hidden = false; });
     var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
     var run = function (text) {
       out.innerHTML = "";
@@ -81,11 +95,13 @@
           eq.counts.forEach(function (c, i) { var n = (c[k] || 0) * Number(co[i]); if (i < eq.left.length) l += n; else r += n; });
           return '<tr><th scope="row">' + esc(k) + '</th><td>' + l + '</td><td>' + r + '</td></tr>';
         }).join("");
+        var notes = (eq.notes && eq.notes.length) ? '<p class="notes">' + esc(eq.notes.join(" ")) + '</p>' : "";
         out.innerHTML = '<div class="ok"><p class="eq">' + esc(window.Balancer.format(res)) + '</p><p class="check-line">Atoms on each side, counted again from the answer:</p>' +
-          '<table><thead><tr><th scope="col">Element</th><th scope="col">Left</th><th scope="col">Right</th></tr></thead><tbody>' + rowsHtml + '</tbody></table></div>';
+          '<table><thead><tr><th scope="col">Element</th><th scope="col">Left</th><th scope="col">Right</th></tr></thead><tbody>' + rowsHtml + '</tbody></table>' + notes + '</div>';
       } catch (e) { out.innerHTML = '<div class="err"><p><strong>Cannot read that.</strong> ' + esc(e.message) + '</p></div>'; }
     };
-    form.addEventListener("submit", function (ev) { ev.preventDefault(); run(input.value); });
-    $$(".chip.ex").forEach(function (b) { b.addEventListener("click", function () { input.value = b.getAttribute("data-eq"); run(input.value); input.focus(); }); });
+    var reveal = function () { try { out.scrollIntoView({ block: "nearest", behavior: "smooth" }); } catch (e) { /* ignore */ } };
+    form.addEventListener("submit", function (ev) { ev.preventDefault(); run(input.value); reveal(); });
+    $$(".chip.ex").forEach(function (b) { b.addEventListener("click", function () { input.value = b.getAttribute("data-eq"); run(input.value); reveal(); }); });
   }
 })();
